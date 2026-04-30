@@ -1,0 +1,32 @@
+# Virtual environment — never push this
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Large model files — too big for GitHub
+*.bin
+*.pt
+*.pth
+*.safetensors
+
+# Large data files — use download script instead
+*.zip
+*.tar.gz
+*.csv
+*.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
