@@ -56,7 +56,39 @@ python src/load_data.py
 python src/build_index.py
 python src/rag_pipeline.py
 ```
+### Results
+Loading FAISS index...
+  Vectors in index : 5200
+Loading passage store...
+  Total passages   : 5200
 
+Loading embedding model : all-MiniLM-L6-v2
+Loading LLM             : google/flan-t5-base
+
+── Single Query Test ────────────────────────────────
+Question : Does aspirin reduce the risk of cardiovascular disease?
+Answer   : Yes, aspirin reduces platelet aggregation and lowers risk
+
+── Continuous Knowledge Update Demo ─────────────────
+  Source : WHO_guideline_2025
+  Chunks : 5
+  Added 5 chunks to index
+  Index size now : 5205 vectors
+  Update complete ✓
+
+── Query After Knowledge Update ─────────────────────
+Answer   : Updated guidelines suggest aspirin not recommended for primary prevention
+
+── Milestone 1 Evaluation ───────────────────────────
+Evaluating: 100%|████████| 20/20
+Label match accuracy : 45.0%
+
+Files saved to results/:
+  preliminary_results.json
+  preliminary_metrics.txt
+  update_log.jsonl
+
+rag_pipeline.py complete ✓
 ---
 
 ## Datasets Used
