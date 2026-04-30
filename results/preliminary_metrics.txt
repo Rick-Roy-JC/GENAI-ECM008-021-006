@@ -1,0 +1,24 @@
+CS5202 — RAG Clinical NLP — Milestone 1 Results
+==================================================
+
+Model (embedder) : all-MiniLM-L6-v2
+Model (LLM)      : google/flan-t5-base
+Top-K retrieved  : 3
+Samples evaluated: 20
+
+Label match accuracy : 10.0%
+
+Sample Predictions (first 3):
+----------------------------------------
+Q  : Can common carotid intima media thickness serve as an indicator of both cardiovascular phenotype and
+GT : yes
+A  : High-sensitivity CRP levels and carotid intima media thickness in healthy Koreans
+
+Q  : Autoxidation products of both carbohydrates and lipids are increased in uremic plasma: is there oxid
+GT : yes
+A  : Plasma CML levels were not correlated with fructoselysine levels.
+
+Q  : Does pain intensity predict a poor opioid response in cancer patients?
+GT : no
+A  : A secondary analysis of one-hundred-sixty-seven patients referred for treatment of cancer-related pain
+
