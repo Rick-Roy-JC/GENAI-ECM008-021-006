@@ -1,10 +1,14 @@
 # GENAI-ECM008-021-006
 RAG-based Clinical NLP with Continuous Knowledge Updating — CS5202 Spring 2026
-# Project 19 — RAG-based Clinical NLP with Continuous Knowledge Updating
+# Project — RAG-based Clinical NLP with Continuous Knowledge Updating
 
 **Course:** CS5202 — GenAI and LLM, Spring 2026  
 **Domain:** Medical GenAI  
-**Team Members:** [Name 1 — Roll No], [Name 2 — Roll No], ...
+**Team Members:**
+TEAM NO :2  
+[Aritra Roy — SE23UECM008]
+[Dheeraj Reddy — SE23UECM021]
+[A sai Praneeth - SE23UECM006]
 
 ---
 
@@ -25,8 +29,8 @@ mechanism for continuous knowledge updating.
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/project-19-<rollno>.git
-cd project-19-<rollno>
+git clone https://github.com/Rick-Roy-JC/GENAI-ECM008-021-006.git
+cd GENAI-ECM008-021-006 
 ```
 
 ### 2. Create and activate virtual environment
@@ -68,5 +72,5 @@ python src/rag_pipeline.py
 
 | Milestone | Date | Status |
 |---|---|---|
-| Milestone 1 | April 30, 2026 | In Progress |
+| Milestone 1 | April 30, 2026 | Completed |
 | Final Evaluation | May 15, 2026 | Pending |
