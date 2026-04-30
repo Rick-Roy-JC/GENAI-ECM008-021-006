@@ -19,11 +19,22 @@ os.makedirs("data/raw/meddec", exist_ok=True)
 
 # ── Dataset 1: PubMedQA (RAG evaluation) ──────────────────────────────────
 print("Downloading PubMedQA...")
-pubmedqa = load_dataset("qiaojin/PubMedQA", "pqa_labeled")
+try:
+    pubmedqa = load_dataset("qiaojin/PubMedQA", "pqa_labeled")
+except TypeError as exc:
+    # Work around stale/incompatible HF cache metadata on some setups.
+    print(f"Default HuggingFace cache failed ({exc}). Retrying with project cache...")
+    cache_dir = os.path.join("data", "hf_cache")
+    os.makedirs(cache_dir, exist_ok=True)
+    pubmedqa = load_dataset(
+        "qiaojin/PubMedQA",
+        "pqa_labeled",
+        cache_dir=cache_dir
+    )
 pubmedqa.save_to_disk("data/raw/pubmedqa")
 print(f"  Train: {len(pubmedqa['train'])} samples")
 print(f"  Columns: {pubmedqa['train'].column_names}")
-print("  Saved to data/raw/pubmedqa ✓")
+print("  Saved to data/raw/pubmedqa")
 
 # ── Dataset 2: MedDec (if cloned via git, just verify it exists) ───────────
 meddec_path = "data/raw/meddec"
