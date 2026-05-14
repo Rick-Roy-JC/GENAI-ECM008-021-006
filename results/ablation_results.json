@@ -1,0 +1,34 @@
+{
+  "conditions": {
+    "no_rag": {
+      "accuracy": 37.0,
+      "rouge_l": 0.37,
+      "yes_f1": 0.2462,
+      "no_f1": 0.4915,
+      "maybe_f1": 0.0,
+      "macro_f1": 0.2459
+    },
+    "rag_static": {
+      "accuracy": 37.0,
+      "rouge_l": 0.37,
+      "yes_f1": 0.4356,
+      "no_f1": 0.3659,
+      "maybe_f1": 0.0,
+      "macro_f1": 0.2672
+    },
+    "rag_update": {
+      "accuracy": 37.0,
+      "rouge_l": 0.37,
+      "yes_f1": 0.4356,
+      "no_f1": 0.3659,
+      "maybe_f1": 0.0,
+      "macro_f1": 0.2672
+    }
+  },
+  "improvements": {
+    "rag_vs_no_rag_accuracy": 0.0,
+    "update_vs_static_accuracy": 0.0,
+    "rag_vs_no_rag_macro_f1": 0.0213,
+    "update_vs_static_macro_f1": 0.0
+  }
+}
