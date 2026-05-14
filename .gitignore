@@ -21,7 +21,18 @@ __pycache__/
 *.zip
 *.tar.gz
 *.csv
+
+# JSON: ignore by default (HF caches, etc.), but allow repo config + splits + results
 *.json
+!pyrightconfig.json
+!basedpyrightconfig.json
+!data/processed/*.json
+!data/index/index_meta*.json
+!results/*.json
+
+# FAISS indexes and passage stores — rebuild with src/build_index.py / compare_embedders
+data/index/*.pkl
+data/index/*.index
 
 # OS files
 .DS_Store
@@ -29,7 +40,4 @@ Thumbs.db
 
 # IDE files
 .vscode/
-.idea/venv/
-__pycache__/
-.ipynb_checkpoints/
-*.pyc
+.idea/
