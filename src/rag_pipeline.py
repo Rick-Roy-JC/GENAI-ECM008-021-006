@@ -111,42 +111,50 @@ def retrieve(query, index, passages, embedder, top_k=TOP_K):
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # SECTION 3 — Generation
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
 def build_prompt(query, retrieved_passages):
     """
-    Combines retrieved passages with the query into a prompt
-    that Flan-T5 can understand.
+    Improved prompt that explicitly instructs the model to
+    answer only with yes, no, or maybe.
+    This directly addresses the low label match accuracy from Milestone 1.
     """
-
     context_parts = []
     for i, (passage, score) in enumerate(retrieved_passages):
-        context_parts.append(f"[Passage {i+1}] {passage['text']}")
+        context_parts.append(f"Context {i+1}: {passage['text']}")
 
     context = " ".join(context_parts)
 
-    # Flan-T5 works best with instruction-style prompts
+    # Explicit instruction format works best with Flan-T5
     prompt = (
-        f"You are a clinical assistant. "
-        f"Answer the medical question based on the context below.\n\n"
-        f"Context: {context}\n\n"
+        f"Based on the medical context provided, answer the question "
+        f"with only one word: yes, no, or maybe.\n\n"
+        f"{context}\n\n"
         f"Question: {query}\n\n"
-        f"Answer:"
+        f"Answer with only yes, no, or maybe:"
     )
 
     # Truncate if too long — Flan-T5 has 512 token limit
     words = prompt.split()
     if len(words) > 450:
-        prompt = " ".join(words[:450])
+        # Keep instruction + question, trim context
+        context_words = context.split()
+        allowed       = 450 - 40   # reserve space for instruction and question
+        context       = " ".join(context_words[:allowed])
+        prompt = (
+            f"Based on the medical context provided, answer the question "
+            f"with only one word: yes, no, or maybe.\n\n"
+            f"{context}\n\n"
+            f"Question: {query}\n\n"
+            f"Answer with only yes, no, or maybe:"
+        )
 
     return prompt
-
-
 def generate_answer(prompt, tokenizer, llm):
     """
-    Generate an answer using Flan-T5.
-    Returns the generated answer string.
+    Generate answer with constrained decoding.
+    max_new_tokens=5 forces a short answer.
+    Combined with the improved prompt this strongly pushes
+    the model toward yes/no/maybe outputs.
     """
-
     inputs = tokenizer(
         prompt,
         return_tensors="pt",
@@ -156,14 +164,24 @@ def generate_answer(prompt, tokenizer, llm):
 
     outputs = llm.generate(
         inputs["input_ids"],
-        max_new_tokens=100,
-        num_beams=4,             # beam search for better quality
+        max_new_tokens=5,        # force short answer
+        num_beams=4,
         early_stopping=True,
-        no_repeat_ngram_size=3   # avoid repeating phrases
+        no_repeat_ngram_size=2
     )
 
     answer = tokenizer.decode(outputs[0], skip_special_tokens=True)
-    return answer
+
+    # Post-process — extract yes/no/maybe from whatever was generated
+    answer_clean = answer.lower().strip()
+    if "yes"   in answer_clean:
+        return "yes"
+    elif "no"  in answer_clean:
+        return "no"
+    elif "maybe" in answer_clean:
+        return "maybe"
+    else:
+        return answer_clean    # return raw if none matched
 
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -339,9 +357,10 @@ def evaluate_on_test_set(index, passages, embedder, tokenizer, llm, n_samples=20
         results.append(result)
 
         # Simple accuracy — does generated answer contain correct label word?
-        pred   = result["answer"].lower()
-        label  = sample["label"].lower()
-        if label in pred:
+        # Exact match accuracy — answer should now be exactly yes/no/maybe
+        pred  = result["answer"].lower().strip()
+        label = sample["label"].lower().strip()
+        if pred == label:
             correct_label += 1
 
     accuracy = correct_label / len(results) * 100
