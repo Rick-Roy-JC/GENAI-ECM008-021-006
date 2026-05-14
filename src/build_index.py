@@ -25,9 +25,9 @@ INDEX_DIR     = "data/index"
 os.makedirs(INDEX_DIR, exist_ok=True)
 
 # Settings
-MODEL_NAME    = "all-MiniLM-L6-v2"   # small fast model, works on any PC
-CHUNK_SIZE    = 150                    # words per chunk
-CHUNK_OVERLAP = 30                     # overlap between chunks
+MODEL_NAME    = "pritamdeka/S-PubMedBert-MS-MARCO"  # small fast model, works on any PC
+CHUNK_SIZE      = 200
+CHUNK_OVERLAP   = 40                    # overlap between chunks
 
 
 def chunk_text(text):
@@ -127,10 +127,11 @@ def main():
         print(f"  Text: {p['text'][:120]}...")
 
     # ── Step 6: Save everything ───────────────────────────────────────────
-    faiss_path    = os.path.join(INDEX_DIR, "pubmedqa.index")
-    passages_path = os.path.join(INDEX_DIR, "passages.pkl")
-    meta_path     = os.path.join(INDEX_DIR, "index_meta.json")
+    faiss_path    = os.path.join(INDEX_DIR, "pubmedqa_pubmedbert.index")
+    passages_path = os.path.join(INDEX_DIR, "passages_pubmedbert.pkl")
+    meta_path     = os.path.join(INDEX_DIR, "index_meta_pubmedbert.json")
 
+    print("Saving FAISS index...")
     faiss.write_index(index, faiss_path)
     print(f"\nSaved FAISS index   → {faiss_path}")
 

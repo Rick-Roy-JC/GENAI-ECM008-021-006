@@ -33,7 +33,7 @@ RESULTS_DIR   = "results"
 os.makedirs(RESULTS_DIR, exist_ok=True)
 
 # Settings — must match build_index.py exactly
-MODEL_NAME    = "all-MiniLM-L6-v2"
+MODEL_NAME    = "pritamdeka/S-PubMedBert-MS-MARCO"
 LLM_NAME      = "google/flan-t5-base"
 TOP_K         = 3
 
@@ -44,9 +44,8 @@ TOP_K         = 3
 
 def load_index_and_passages():
     """Load FAISS index and passage store from disk."""
-
-    faiss_path    = os.path.join(INDEX_DIR, "pubmedqa.index")
-    passages_path = os.path.join(INDEX_DIR, "passages.pkl")
+    faiss_path    = os.path.join(INDEX_DIR, "pubmedqa_pubmedbert.index")
+    passages_path = os.path.join(INDEX_DIR, "passages_pubmedbert.pkl")
 
     if not os.path.exists(faiss_path):
         raise FileNotFoundError(
@@ -268,8 +267,8 @@ def save_updated_index(index, passages):
     Save the updated index and passage store back to disk
     so updates persist across runs.
     """
-    faiss.write_index(index, os.path.join(INDEX_DIR, "pubmedqa.index"))
-    with open(os.path.join(INDEX_DIR, "passages.pkl"), "wb") as f:
+    faiss.write_index(index, os.path.join(INDEX_DIR, "pubmedqa_pubmedbert.index"))
+    with open(os.path.join(INDEX_DIR, "passages_pubmedbert.pkl"), "wb") as f:
         pickle.dump(passages, f)
     print("\nUpdated index saved to disk.")
 
