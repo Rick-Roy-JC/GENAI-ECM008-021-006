@@ -1,0 +1,31 @@
+CS5202 Spring 2026 — Clinical RAG Evaluation Summary
+=======================================================
+
+Embedder  : pritamdeka/S-PubMedBert-MS-MARCO
+LLM       : google/flan-t5-base
+Top-K     : 3
+Samples   : 100
+
+Exact Match Accuracy : 37.0%
+ROUGE-L Score        : 0.0009
+
+Retrieval Quality:
+  Mean top-1 score   : 0.9421
+  Mean top-3 score   : 0.9209
+
+Per-Class Results:
+              precision    recall  f1-score   support
+
+         yes       0.40      0.48      0.44        46
+          no       0.33      0.41      0.37        37
+       maybe       0.00      0.00      0.00        17
+
+    accuracy                           0.37       100
+   macro avg       0.24      0.29      0.27       100
+weighted avg       0.31      0.37      0.34       100
+
+Confusion Matrix (rows=actual, cols=predicted):
+         yes    no   maybe
+  yes     [22 24  0]
+  no      [22 15  0]
+  maybe   [11  6  0]
