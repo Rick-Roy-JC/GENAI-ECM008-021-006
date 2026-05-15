@@ -1,0 +1,68 @@
+{
+  "experiment": "Continuous Knowledge Update",
+  "embedder": "pritamdeka/S-PubMedBert-MS-MARCO",
+  "llm": "google/flan-t5-base",
+  "index_size_before": 8,
+  "index_size_after": 11,
+  "documents_added": 3,
+  "answers_changed": 0,
+  "total_queries": 3,
+  "update_log": [
+    {
+      "source": "WHO_aspirin_2025",
+      "topic": "aspirin primary prevention",
+      "chunks": 1,
+      "index_size_after": 9
+    },
+    {
+      "source": "FDA_metformin_2025",
+      "topic": "metformin kidney disease",
+      "chunks": 1,
+      "index_size_after": 10
+    },
+    {
+      "source": "NEJM_bp_target_2025",
+      "topic": "blood pressure target",
+      "chunks": 1,
+      "index_size_after": 11
+    }
+  ],
+  "comparisons": [
+    {
+      "topic": "aspirin primary prevention",
+      "query": "Should aspirin be used for primary prevention of cardiovascular disease in elderly patients?",
+      "answer_before": "yes",
+      "answer_after": "yes",
+      "source_before": "clinical_kb_aspirin_old",
+      "source_after": "clinical_kb_aspirin_old",
+      "score_before": 0.958,
+      "score_after": 0.958,
+      "answer_changed": false,
+      "expected_change": "yes \u2192 no  (old guidelines recommended it, new ones say against)"
+    },
+    {
+      "topic": "metformin kidney disease",
+      "query": "Can metformin be safely used in patients with chronic kidney disease?",
+      "answer_before": "yes",
+      "answer_after": "yes",
+      "source_before": "clinical_kb_metformin_old",
+      "source_after": "FDA_metformin_2025",
+      "score_before": 0.9356,
+      "score_after": 0.9474,
+      "answer_changed": false,
+      "expected_change": "no \u2192 yes  (old guidelines restricted it, new ones expand use)"
+    },
+    {
+      "topic": "blood pressure target",
+      "query": "Is intensive blood pressure lowering below 120 mmHg beneficial?",
+      "answer_before": "yes",
+      "answer_after": "yes",
+      "source_before": "clinical_kb_blood_pressure_old",
+      "source_after": "NEJM_bp_target_2025",
+      "score_before": 0.9306,
+      "score_after": 0.9378,
+      "answer_changed": false,
+      "expected_change": "no \u2192 yes  (old target was 140, new evidence supports 120)"
+    }
+  ]
+}

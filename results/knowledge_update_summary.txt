@@ -1,0 +1,36 @@
+CS5202 Spring 2026 — Knowledge Update Experiment
+============================================================
+
+Embedder         : pritamdeka/S-PubMedBert-MS-MARCO
+LLM              : google/flan-t5-base
+Index before     : 8 vectors
+Index after      : 11 vectors
+Documents added  : 3
+Answers changed  : 0/3
+
+Query Topic                      Before    After   Changed?
+------------------------------------------------------------
+aspirin primary prevention          yes      yes         no
+metformin kidney disease            yes      yes         no
+blood pressure target               yes      yes         no
+
+Detailed Comparisons:
+------------------------------------------------------------
+
+Topic  : aspirin primary prevention
+Query  : Should aspirin be used for primary prevention of cardiovascular disease in elderly patients?
+Before : yes (source: clinical_kb_aspirin_old, score: 0.958)
+After  : yes (source: clinical_kb_aspirin_old, score: 0.958)
+Changed: no
+
+Topic  : metformin kidney disease
+Query  : Can metformin be safely used in patients with chronic kidney disease?
+Before : yes (source: clinical_kb_metformin_old, score: 0.9356)
+After  : yes (source: FDA_metformin_2025, score: 0.9474)
+Changed: no
+
+Topic  : blood pressure target
+Query  : Is intensive blood pressure lowering below 120 mmHg beneficial?
+Before : yes (source: clinical_kb_blood_pressure_old, score: 0.9306)
+After  : yes (source: NEJM_bp_target_2025, score: 0.9378)
+Changed: no
