@@ -6,6 +6,7 @@
   "index_size_after": 11,
   "documents_added": 3,
   "answers_changed": 0,
+  "sources_changed": 2,
   "total_queries": 3,
   "update_log": [
     {
@@ -35,9 +36,12 @@
       "answer_after": "yes",
       "source_before": "clinical_kb_aspirin_old",
       "source_after": "clinical_kb_aspirin_old",
-      "score_before": 0.958,
-      "score_after": 0.958,
+      "score_before": 0.9579819440841675,
+      "score_after": 0.9579819440841675,
+      "context_before": "Aspirin at low doses of 75 to 100mg daily is widely recommended for primary prevention of cardiovascular disease in adults over 50 with elevated risk factors. Aspirin inhibits platelet aggregation and",
+      "context_after": "Aspirin at low doses of 75 to 100mg daily is widely recommended for primary prevention of cardiovascular disease in adults over 50 with elevated risk factors. Aspirin inhibits platelet aggregation and",
       "answer_changed": false,
+      "source_changed": false,
       "expected_change": "yes \u2192 no  (old guidelines recommended it, new ones say against)"
     },
     {
@@ -47,9 +51,12 @@
       "answer_after": "yes",
       "source_before": "clinical_kb_metformin_old",
       "source_after": "FDA_metformin_2025",
-      "score_before": 0.9356,
-      "score_after": 0.9474,
+      "score_before": 0.935632050037384,
+      "score_after": 0.9474211931228638,
+      "context_before": "Metformin is the first-line oral medication for type 2 diabetes mellitus. It reduces hepatic glucose production and improves insulin sensitivity. Metformin is contraindicated in patients with eGFR bel",
+      "context_after": "FDA 2025 updated labelling expands metformin use to patients with mild to moderate chronic kidney disease with eGFR above 30, previously restricted above 45. New safety data from large observational s",
       "answer_changed": false,
+      "source_changed": true,
       "expected_change": "no \u2192 yes  (old guidelines restricted it, new ones expand use)"
     },
     {
@@ -59,9 +66,12 @@
       "answer_after": "yes",
       "source_before": "clinical_kb_blood_pressure_old",
       "source_after": "NEJM_bp_target_2025",
-      "score_before": 0.9306,
-      "score_after": 0.9378,
+      "score_before": 0.9306215047836304,
+      "score_after": 0.9378370642662048,
+      "context_before": "Standard blood pressure treatment targets systolic pressure below 140 mmHg in most adults. For diabetic patients a target below 130 mmHg is recommended. First-line antihypertensive agents include ACE ",
+      "context_after": "NEJM 2025 landmark trial SPRINT-2 confirms intensive systolic blood pressure target below 120 mmHg reduces major cardiovascular events by 25 percent compared to standard target below 140 mmHg. Absolut",
       "answer_changed": false,
+      "source_changed": true,
       "expected_change": "no \u2192 yes  (old target was 140, new evidence supports 120)"
     }
   ]

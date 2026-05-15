@@ -7,30 +7,52 @@ Index before     : 8 vectors
 Index after      : 11 vectors
 Documents added  : 3
 Answers changed  : 0/3
+Sources changed  : 2/3
 
-Query Topic                      Before    After   Changed?
-------------------------------------------------------------
-aspirin primary prevention          yes      yes         no
-metformin kidney disease            yes      yes         no
-blood pressure target               yes      yes         no
+Query Topic                      Before    After   Src Chg?   Ans Chg?
+----------------------------------------------------------------------
+aspirin primary prevention          yes      yes         no         no
+metformin kidney disease            yes      yes        YES         no
+blood pressure target               yes      yes        YES         no
 
 Detailed Comparisons:
 ------------------------------------------------------------
 
 Topic  : aspirin primary prevention
 Query  : Should aspirin be used for primary prevention of cardiovascular disease in elderly patients?
-Before : yes (source: clinical_kb_aspirin_old, score: 0.958)
-After  : yes (source: clinical_kb_aspirin_old, score: 0.958)
-Changed: no
+Before : yes (source: clinical_kb_aspirin_old, score: 0.9580)
+After  : yes (source: clinical_kb_aspirin_old, score: 0.9580)
+Answer Changed: no
+Source Changed: no
+
+Context Before (first 200 chars):
+Aspirin at low doses of 75 to 100mg daily is widely recommended for primary prevention of cardiovascular disease in adults over 50 with elevated risk factors. Aspirin inhibits platelet aggregation and
+
+Context After (first 200 chars):
+Aspirin at low doses of 75 to 100mg daily is widely recommended for primary prevention of cardiovascular disease in adults over 50 with elevated risk factors. Aspirin inhibits platelet aggregation and
 
 Topic  : metformin kidney disease
 Query  : Can metformin be safely used in patients with chronic kidney disease?
 Before : yes (source: clinical_kb_metformin_old, score: 0.9356)
 After  : yes (source: FDA_metformin_2025, score: 0.9474)
-Changed: no
+Answer Changed: no
+Source Changed: YES
+
+Context Before (first 200 chars):
+Metformin is the first-line oral medication for type 2 diabetes mellitus. It reduces hepatic glucose production and improves insulin sensitivity. Metformin is contraindicated in patients with eGFR bel
+
+Context After (first 200 chars):
+FDA 2025 updated labelling expands metformin use to patients with mild to moderate chronic kidney disease with eGFR above 30, previously restricted above 45. New safety data from large observational s
 
 Topic  : blood pressure target
 Query  : Is intensive blood pressure lowering below 120 mmHg beneficial?
 Before : yes (source: clinical_kb_blood_pressure_old, score: 0.9306)
 After  : yes (source: NEJM_bp_target_2025, score: 0.9378)
-Changed: no
+Answer Changed: no
+Source Changed: YES
+
+Context Before (first 200 chars):
+Standard blood pressure treatment targets systolic pressure below 140 mmHg in most adults. For diabetic patients a target below 130 mmHg is recommended. First-line antihypertensive agents include ACE 
+
+Context After (first 200 chars):
+NEJM 2025 landmark trial SPRINT-2 confirms intensive systolic blood pressure target below 120 mmHg reduces major cardiovascular events by 25 percent compared to standard target below 140 mmHg. Absolut
