@@ -17,18 +17,18 @@
       "macro_f1": 0.2672
     },
     "rag_update": {
-      "accuracy": 37.0,
-      "rouge_l": 0.37,
-      "yes_f1": 0.4356,
-      "no_f1": 0.3659,
+      "accuracy": 36.0,
+      "rouge_l": 0.36,
+      "yes_f1": 0.4314,
+      "no_f1": 0.3457,
       "maybe_f1": 0.0,
-      "macro_f1": 0.2672
+      "macro_f1": 0.259
     }
   },
   "improvements": {
     "rag_vs_no_rag_accuracy": 0.0,
-    "update_vs_static_accuracy": 0.0,
+    "update_vs_static_accuracy": -1.0,
     "rag_vs_no_rag_macro_f1": 0.0213,
-    "update_vs_static_macro_f1": 0.0
+    "update_vs_static_macro_f1": -0.0082
   }
 }

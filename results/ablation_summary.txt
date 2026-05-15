@@ -3,13 +3,13 @@ CS5202 Spring 2026 — Ablation Study
 
 Metric                        No RAG   RAG Static   RAG+Update
 ------------------------------------------------------------
-Accuracy (%)                    37.0         37.0         37.0
-Macro F1                      0.2459       0.2672       0.2672
-Yes F1                        0.2462       0.4356       0.4356
-No F1                         0.4915       0.3659       0.3659
+Accuracy (%)                    37.0         37.0         36.0
+Macro F1                      0.2459       0.2672        0.259
+Yes F1                        0.2462       0.4356       0.4314
+No F1                         0.4915       0.3659       0.3457
 Maybe F1                         0.0          0.0          0.0
-ROUGE-L                         0.37         0.37         0.37
+ROUGE-L                         0.37         0.37         0.36
 ------------------------------------------------------------
 
 RAG vs No RAG          : +0.0% accuracy
-Update vs Static RAG   : +0.0% accuracy
+Update vs Static RAG   : -1.0% accuracy

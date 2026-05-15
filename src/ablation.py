@@ -276,29 +276,88 @@ def run_rag_with_update(test_data, index, passages, embedder, tokenizer, llm):
                 "disease in adults over 60 years due to increased bleeding risk. "
                 "Secondary prevention use remains unchanged for patients with "
                 "established cardiovascular disease. Clinicians should reassess "
-                "patients currently on aspirin therapy for primary prevention."
+                "patients currently on aspirin therapy for primary prevention. "
+                "The risk of major gastrointestinal bleeding outweighs benefits "
+                "in patients without prior cardiovascular events. Annual review "
+                "of antiplatelet therapy is now recommended for all patients "
+                "over 60 receiving aspirin. Alternative antiplatelet agents "
+                "should be considered where clinically appropriate."
             )
         },
         {
-            "source": "FDA_drug_safety_update_2025",
+            "source": "FDA_metformin_update_2025",
             "text": (
-                "FDA 2025 safety communication: Metformin extended-release "
-                "tablets have shown improved glycemic control with reduced "
-                "gastrointestinal side effects compared to immediate-release "
-                "formulations. New evidence supports metformin as first-line "
-                "therapy for type 2 diabetes with cardiovascular comorbidities. "
-                "Dose adjustment required for patients with eGFR below 45."
+                "FDA 2025 safety communication confirms metformin as first-line "
+                "therapy for type 2 diabetes mellitus. Extended-release metformin "
+                "demonstrates superior glycemic control with significantly reduced "
+                "gastrointestinal adverse effects compared to immediate-release. "
+                "New evidence from large randomised controlled trials supports "
+                "metformin use in patients with mild to moderate chronic kidney "
+                "disease with eGFR above 30. Dose adjustment required for eGFR "
+                "below 45. Metformin reduces cardiovascular mortality in obese "
+                "patients with type 2 diabetes independent of glycemic effects. "
+                "Combination therapy with SGLT2 inhibitors shows additive benefit."
             )
         },
         {
-            "source": "NEJM_clinical_trial_2025",
+            "source": "NEJM_blood_pressure_trial_2025",
             "text": (
-                "A randomised controlled trial published in NEJM 2025 found that "
-                "intensive blood pressure lowering to below 120 mmHg systolic "
-                "significantly reduced major cardiovascular events compared to "
-                "standard treatment targeting below 140 mmHg. Benefits were "
-                "observed across age groups and diabetic status. Adverse events "
-                "including hypotension were more frequent in the intensive group."
+                "A large randomised controlled trial published in NEJM 2025 "
+                "demonstrated that intensive systolic blood pressure lowering "
+                "to below 120 mmHg significantly reduced major adverse "
+                "cardiovascular events compared to standard treatment targeting "
+                "below 140 mmHg. The absolute risk reduction was 1.6 percent "
+                "over three years of follow-up. Benefits were consistent across "
+                "diabetic and non-diabetic patients and across age groups. "
+                "Adverse events including hypotension syncope and acute kidney "
+                "injury were more frequent in the intensive treatment group. "
+                "These findings support more aggressive blood pressure targets "
+                "in high cardiovascular risk populations."
+            )
+        },
+        {
+            "source": "Lancet_statin_therapy_2025",
+            "text": (
+                "Updated Lancet meta-analysis 2025 confirms that statin therapy "
+                "reduces LDL cholesterol and significantly lowers cardiovascular "
+                "mortality across all risk groups. High-intensity statin therapy "
+                "with atorvastatin or rosuvastatin is recommended as first-line "
+                "for patients with established atherosclerotic disease. New data "
+                "supports statin initiation in patients with diabetes regardless "
+                "of baseline LDL levels. Statin therapy is safe in elderly "
+                "patients above 75 years with established cardiovascular disease. "
+                "Muscle side effects are rare with modern statin formulations. "
+                "Combination with ezetimibe provides additional LDL reduction."
+            )
+        },
+        {
+            "source": "BMJ_vitamin_D_update_2025",
+            "text": (
+                "A comprehensive systematic review in BMJ 2025 found that "
+                "vitamin D supplementation does not significantly reduce "
+                "all-cause mortality or cardiovascular events in the general "
+                "population. However supplementation remains recommended for "
+                "patients with confirmed vitamin D deficiency defined as serum "
+                "25-hydroxyvitamin D below 25 nmol per litre. Bone health "
+                "benefits of vitamin D and calcium combined supplementation "
+                "are confirmed in postmenopausal women and elderly patients. "
+                "Routine screening for vitamin D deficiency is not recommended "
+                "in asymptomatic adults without risk factors."
+            )
+        },
+        {
+            "source": "JAMA_beta_blocker_2025",
+            "text": (
+                "Updated JAMA clinical practice guidelines 2025 confirm that "
+                "beta blocker therapy significantly reduces mortality in patients "
+                "with heart failure with reduced ejection fraction below 40 percent. "
+                "Carvedilol bisoprolol and metoprolol succinate are the three "
+                "beta blockers with proven mortality benefit in heart failure. "
+                "Beta blockers should be initiated at low doses and uptitrated "
+                "gradually in stable patients. They are contraindicated in "
+                "decompensated heart failure requiring intravenous diuretics. "
+                "Long-term beta blocker therapy is associated with reverse "
+                "cardiac remodelling and improvement in ejection fraction."
             )
         }
     ]
