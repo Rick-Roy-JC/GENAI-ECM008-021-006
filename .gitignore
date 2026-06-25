@@ -34,6 +34,15 @@ __pycache__/
 data/index/*.pkl
 data/index/*.index
 
+# Node deps (Report.js) — reproducible via package-lock.json
+node_modules/
+
+# Cloned external dataset repo (contains its own .git/ — never nest repos)
+data/meddec/
+
+# Local HF model/dataset cache — never push model weights
+data/hf_cache/
+
 # OS files
 .DS_Store
 Thumbs.db

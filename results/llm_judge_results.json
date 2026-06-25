@@ -1,0 +1,233 @@
+{
+  "judge_model": "gemini-2.5-flash",
+  "n_judged": 25,
+  "mean_faithfulness": 2.84,
+  "mean_relevance": 4.88,
+  "per_sample": [
+    {
+      "index": 3,
+      "question": "Risk factors for major depression during midlife among a community sample of women with and without prior major depression: are they the same or different?",
+      "answer": "yes",
+      "ground_truth_label": "no",
+      "faithfulness": 3,
+      "relevance": 2,
+      "reasoning": "The question asks whether risk factors are the same or different. The retrieved context clearly states that \"their risk profiles differed\" and provides distinct risk factors for first-onset and recurrent MDD. The system's answer \"yes\" is ambiguous and does not specify whether the risk factors are the same or different, thus failing to provide the specific information requested by the question. While the context supports that they are different, the answer \"yes\" does not convey this finding, making it low in relevance. It is not unfaithful, as the underlying fact (that they are different) is supported, but the answer itself is not a clear statement of that fact."
+    },
+    {
+      "index": 4,
+      "question": "Is trabecular bone related to primary stability of miniscrews?",
+      "answer": "yes",
+      "ground_truth_label": "yes",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The retrieved context, specifically passage [1], directly supports the answer. It states that 'lower levels of primary stability when the BMD of trabecular bone was lower' and that there was a 'correlation between trabecular number, trabecular thickness, BV/TV, trabecular BMD, total BMD, and IT, PTV, and PS,' which are all measures of primary stability. This clearly indicates a relationship between trabecular bone and the primary stability of miniscrews, making the 'yes' answer both faithful and relevant."
+    },
+    {
+      "index": 11,
+      "question": "Is there a favorable subset of patients with prostate cancer who develop oligometastases?",
+      "answer": "yes",
+      "ground_truth_label": "yes",
+      "faithfulness": 1,
+      "relevance": 5,
+      "reasoning": "The question asks if there is a favorable subset of patients with prostate cancer who develop oligometastases. Context [2] states that one of its objectives was \"to investigate whether patients with <=5 lesions had an improved outcome relative to patients with >5 lesions.\" This directly addresses the concept of a favorable subset based on the number of metastases (oligometastases). However, the context does not provide the conclusion of this investigation. The sentence discussing the metastatic number is truncated (\"With regard to the metastatic number, patients with <or=\"). Therefore, the system's answer 'yes' is not supported by the provided context, as the context only indicates that such a subset was being investigated, not that it was found or exists. Thus, faithfulness is low. The answer is highly relevant as it directly addresses the yes/no question."
+    },
+    {
+      "index": 13,
+      "question": "Is eligibility for a chemotherapy protocol a good prognostic factor for invasive bladder cancer after radical cystectomy?",
+      "answer": "yes",
+      "ground_truth_label": "yes",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "Context [1] directly addresses the question, stating its purpose was \"To assess whether eligibility to an adjuvant chemotherapy protocol in itself represents a good prognostic factor after radical cystectomy for bladder cancer.\" The results presented in context [1] show that the 'protocol group' (those eligible for the chemotherapy study) had significantly better median overall survival, recurrence-free survival, lower tumor progression, and lower cancer-related death compared to the 'matched group' and 'remaining group'. This strongly supports the system's 'yes' answer, indicating that eligibility for the protocol was indeed a good prognostic factor. The answer directly addresses the yes/no question."
+    },
+    {
+      "index": 14,
+      "question": "Is withdrawal-induced anxiety in alcoholism based on beta-endorphin deficiency?",
+      "answer": "no",
+      "ground_truth_label": "yes",
+      "faithfulness": 1,
+      "relevance": 5,
+      "reasoning": "The retrieved context, specifically sections [1] and [2], states that beta-endorphin (beta E) levels are significantly lowered during alcohol withdrawal and that these lowered beta E levels are inversely correlated with anxiety (r=-0.58 on day 1 and r=-0.71 on day 14). This strong inverse correlation indicates that as beta E levels decrease, anxiety increases, strongly suggesting that withdrawal-induced anxiety is associated with or 'based on' beta-endorphin deficiency. Therefore, the system's answer 'no' directly contradicts the evidence provided in the context."
+    },
+    {
+      "index": 17,
+      "question": "Cancer of the buccal mucosa: are margins and T-stage accurate predictors of local control?",
+      "answer": "no",
+      "ground_truth_label": "no",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The context states that for buccal mucosa cancer, patients with close or positive margins had a 66% local failure rate compared to 52% with negative margins, but crucially, it notes \"P = ns\" (not significant). This directly indicates that margin status was not a statistically accurate predictor of local control in this study. The question asks if *margins AND T-stage* are accurate predictors. Since margins are explicitly shown not to be a significant predictor, the overall answer to the combined question is 'no'. The system's answer 'no' is therefore well-supported by the context. The answer directly addresses the yes/no question."
+    },
+    {
+      "index": 25,
+      "question": "Marital status, living arrangement and mortality: does the association vary by gender?",
+      "answer": "no",
+      "ground_truth_label": "yes",
+      "faithfulness": 1,
+      "relevance": 5,
+      "reasoning": "The system's answer 'no' is unfaithful to the provided context. The context explicitly states multiple instances where the association between marital status, living arrangement, and mortality *does* vary by gender. For example, 'Men appear to benefit more from being married than women' and 'The benefit of being married was stronger for men than for women'. Furthermore, the context describes different highest mortality risks for men (divorced/single living alone) compared to women (single living with a partner), indicating variation by gender in the impact of living arrangements. While the context mentions that 'After adjustment for living arrangements, the gender difference by marital status disappeared', this is a specific finding under adjustment and does not negate the overall variation described elsewhere. The answer is relevant as it directly addresses the yes/no question."
+    },
+    {
+      "index": 27,
+      "question": "Do family physicians know the costs of medical care?",
+      "answer": "yes",
+      "ground_truth_label": "no",
+      "faithfulness": 1,
+      "relevance": 5,
+      "reasoning": "The retrieved context, specifically [1], states that 'Few respondents estimated costs within 25% of true cost, and estimates were highly variable. Physicians underestimated costs of expensive drugs and laboratory investigations and overestimated costs of inexpensive drugs.' This indicates that family physicians generally do not know the costs of medical care accurately. Therefore, the system's answer 'yes' directly contradicts the information provided in the context, leading to a very low faithfulness score. The answer is directly relevant to the yes/no question asked."
+    },
+    {
+      "index": 28,
+      "question": "Biliary atresia: should all patients undergo a portoenterostomy?",
+      "answer": "no",
+      "ground_truth_label": "no",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "Context [1] states that a study was done to develop criteria for predicting the outcome of portoenterostomy, \"allowing a more selective approach to the care of these babies.\" This directly implies that not all patients should undergo the procedure, but rather a selection process should be applied. Therefore, the answer \"no\" to whether all patients should undergo it is faithful to the context. The answer also directly addresses the yes/no question asked."
+    },
+    {
+      "index": 29,
+      "question": "Can static foot posture measurements predict regional plantar surface area?",
+      "answer": "yes",
+      "ground_truth_label": "yes",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "Context [1] directly addresses the question, stating that the study's intent was to determine if static foot posture measurements could predict regional plantar surface area, and found that models could indeed describe this relationship for forefoot and midfoot plantar contact area. This strongly supports the 'yes' answer."
+    },
+    {
+      "index": 31,
+      "question": "Should ascitis volume and anthropometric measurements be estimated in hospitalized alcoholic cirrotics?",
+      "answer": "no",
+      "ground_truth_label": "yes",
+      "faithfulness": 1,
+      "relevance": 5,
+      "reasoning": "The context states that ascitis volume and anthropometric assessment are 'not routinely documented or considered in prognostic evaluation.' However, the study described in the context found that 'ascitis volume and dry BMI' were relevant for mortality, and 'arm circumference below the 5th percentile was highly significantly associated with rehospitalization.' These findings suggest that these measurements *should* be estimated because they provide valuable prognostic information. Therefore, the system's answer 'no' is not supported by the overall findings and implications of the context, which highlight the relevance of these measurements. The answer directly addresses the question, making it relevant."
+    },
+    {
+      "index": 35,
+      "question": "The influence of atmospheric pressure on aortic aneurysm rupture--is the diameter of the aneurysm important?",
+      "answer": "no",
+      "ground_truth_label": "maybe",
+      "faithfulness": 1,
+      "relevance": 5,
+      "reasoning": "The system's answer 'no' is unfaithful to the context. Context [1] explicitly states, 'The rate of aortic aneurysm rupture correlates with the aneurysm's diameter, and a higher rate of rupture is observed in patients with larger aneurysms.' This indicates diameter is important for rupture. Furthermore, Context [1] and [2] describe a study that specifically assessed 'the influence of changes in atmospheric pressure on abdominal aneurysm ruptures in relationship to the aneurysm's size' and found 'A statistically non-significant trend towards the higher rupture of large aneurysms (>7 cm) was observed in the cases where the pressure increased between the day before the rupture and the day of the rupture.' This shows that diameter *is* considered important enough to be investigated in this context, and there was even an observed trend, albeit not statistically significant. Therefore, a definitive 'no' is not supported by the provided information. The answer is relevant as it directly addresses the yes/no part of the question."
+    },
+    {
+      "index": 54,
+      "question": "Does a well developed collateral circulation predispose to restenosis after percutaneous coronary intervention?",
+      "answer": "yes",
+      "ground_truth_label": "no",
+      "faithfulness": 1,
+      "relevance": 5,
+      "reasoning": "The retrieved context explicitly states that restenosis rates were similar in poor and good collateral groups and that collateral flow index (CFI) was not correlated with restenosis. Therefore, a well-developed collateral circulation does not predispose to restenosis. The system's answer 'yes' directly contradicts the information provided in the context. However, the answer is relevant as it directly addresses the yes/no question."
+    },
+    {
+      "index": 64,
+      "question": "Does spontaneous remission occur in polyarteritis nodosa?",
+      "answer": "yes",
+      "ground_truth_label": "yes",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "Context [1] explicitly describes a case of a patient diagnosed with Polyarteritis Nodosa (PAN) who experienced spontaneous remission of symptoms without immunosuppressive treatment. This directly supports the system's 'yes' answer to the question 'Does spontaneous remission occur in polyarteritis nodosa?'. While the context also states that whether spontaneous remission occurs is 'largely unknown,' the described case provides concrete evidence that it *can* happen."
+    },
+    {
+      "index": 69,
+      "question": "Can patient coaching reduce racial/ethnic disparities in cancer pain control?",
+      "answer": "yes",
+      "ground_truth_label": "yes",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The retrieved context, particularly context [1], directly addresses the question. It describes a study where patient coaching was implemented, and the results showed that in the experimental group (which received coaching), racial/ethnic disparities in pain control were eliminated. The context explicitly states, 'The effect of the intervention on reducing disparities was significant (P = 0.04),' which directly supports the 'yes' answer."
+    },
+    {
+      "index": 71,
+      "question": "Is the covering of the resection margin after distal pancreatectomy advantageous?",
+      "answer": "yes",
+      "ground_truth_label": "no",
+      "faithfulness": 1,
+      "relevance": 5,
+      "reasoning": "The context explicitly states that there are \"contradictory results concerning the usefulness of covering resection margins\" and the study described found that while pancreatic fistulas were less frequent with coverage, this difference did not reach statistical significance. Furthermore, the hospital stay was longer for patients with coverage. Therefore, the context does not support a definitive 'yes' to the question of whether it is advantageous; in fact, it suggests the opposite or at least no clear advantage. The answer 'yes' is not supported by the context."
+    },
+    {
+      "index": 75,
+      "question": "Does HER2 immunoreactivity provide prognostic information in locally advanced urothelial carcinoma patients receiving adjuvant M-VEC chemotherapy?",
+      "answer": "yes",
+      "ground_truth_label": "maybe",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The question asks if HER2 immunoreactivity provides prognostic information in locally advanced urothelial carcinoma patients receiving adjuvant M-VEC chemotherapy. Context [1] explicitly states: 'As for patients with adjuvant M-VEC, HER2 immunoreactivity was a significant prognostic factor for PFS (p = 0.03) and disease-specific OS (p = 0.02) using univariate analysis'. This directly supports the system's 'yes' answer, making it both faithful and relevant."
+    },
+    {
+      "index": 77,
+      "question": "Living in an urban environment and non-communicable disease risk in Thailand: Does timing matter?",
+      "answer": "no",
+      "ground_truth_label": "yes",
+      "faithfulness": 1,
+      "relevance": 5,
+      "reasoning": "The system's answer 'no' directly contradicts the provided context [1]. Context [1] explicitly states that 'timing and/or duration of urban (vs rural) exposure was associated with risk factors for NCDs' in Thailand, and provides evidence that 'Both measures of urbanicity [early-life urban exposure and the proportion of urban life years] were each independently associated with increases in all behavioral and physiological risk factors.' This clearly indicates that timing *does* matter. The answer is relevant as it directly addresses the yes/no question."
+    },
+    {
+      "index": 81,
+      "question": "Necrotizing fasciitis: an indication for hyperbaric oxygenation therapy?",
+      "answer": "yes",
+      "ground_truth_label": "no",
+      "faithfulness": 1,
+      "relevance": 5,
+      "reasoning": "The system's answer \"yes\" is not faithful to the provided context. While the context mentions that hyperbaric oxygenation (HBO) has been \"recommended as adjuvant therapy\" for necrotizing fasciitis (NF), it immediately states that \"the beneficial effect of HBO for NF remains controversial.\" Furthermore, the study cited in the context found that the mortality rate was higher in the HBO-treated group (36% vs 25%) and they required significantly more surgical débridements. This evidence strongly contradicts a definitive \"yes\" as an indication. The answer is relevant as it directly addresses the yes/no question."
+    },
+    {
+      "index": 84,
+      "question": "Is portable ultrasonography accurate in the evaluation of Schanz pin placement during extremity fracture fixation in austere environments?",
+      "answer": "yes",
+      "ground_truth_label": "yes",
+      "faithfulness": 1,
+      "relevance": 5,
+      "reasoning": "The context explicitly states that \"Schanz pin protrusion measurements are underestimated by ultrasonography (p<0.01) by an average of 10 percent,\" which directly contradicts a simple 'yes' to the question of accuracy. While the context also mentions 'good linear correlation' and 'closely represent actual protrusion values in the 5 to 12 mm range,' the overall finding includes a significant underestimation. Furthermore, the retrieved context provides no information whatsoever regarding 'portable ultrasonography' or its accuracy in 'austere environments,' making the system's affirmative answer for these specific conditions entirely unsupported. The answer is highly relevant as it directly addresses the yes/no nature of the question."
+    },
+    {
+      "index": 86,
+      "question": "Risk stratification in emergency surgical patients: is the APACHE II score a reliable marker of physiological impairment?",
+      "answer": "no",
+      "ground_truth_label": "yes",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The context explicitly states that the APACHE II score \"is not independent of the effects of treatment and might lead to considerable bias\" and that \"Postoperative monitoring with the APACHE II score is clinically irrelevant.\" It also notes that the predicted mortality based on the APACHE II score at ICU admission was significantly different from the observed mortality. These points strongly support the system's 'no' answer regarding the reliability of the APACHE II score as a marker of physiological impairment in this context."
+    },
+    {
+      "index": 88,
+      "question": "Prognostic factors for cervical spondylotic amyotrophy: are signs of spinal cord involvement associated with the neurological prognosis?",
+      "answer": "no",
+      "ground_truth_label": "yes",
+      "faithfulness": 1,
+      "relevance": 5,
+      "reasoning": "The system's answer \"no\" directly contradicts the provided context. Context [1] explicitly states that the presence of T2 high signal intensity areas on MRI and the pyramidal tract sign (both signs of spinal cord involvement) were significantly associated with a poorer recovery, indicating an association with neurological prognosis. The answer is relevant as it directly addresses the yes/no question."
+    },
+    {
+      "index": 89,
+      "question": "Does normothermic normokalemic simultaneous antegrade/retrograde perfusion improve myocardial oxygenation and energy metabolism for hypertrophied hearts?",
+      "answer": "yes",
+      "ground_truth_label": "no",
+      "faithfulness": 1,
+      "relevance": 5,
+      "reasoning": "The context explicitly states that NNSP resulted in a small but significant decrease in myocardial oxygenation and phosphocreatine at 50% LAD flow, and caused a substantial and significantly greater decrease in myocardial oxygenation, adenosine triphosphate, and phosphocreatine at 20% LAD flow compared to NNAP. At 100% LAD flow, both NNAP and NNSP maintained normal levels, meaning NNSP did not offer an improvement. Therefore, the answer 'yes' directly contradicts the findings presented in the context."
+    },
+    {
+      "index": 94,
+      "question": "Is zero central line-associated bloodstream infection rate sustainable?",
+      "answer": "yes",
+      "ground_truth_label": "yes",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The context explicitly states that a CLABSI rate was reduced to zero for >370 consecutive days and later maintained at zero for >600 days after interventions. It also identifies 'ongoing training, surveillance, and vigilance' as key drivers for success and sustainability. Therefore, the answer 'yes' is directly supported by the provided information, indicating that a zero rate is sustainable under certain conditions. The answer directly addresses the yes/no question."
+    },
+    {
+      "index": 97,
+      "question": "Amblyopia: is visual loss permanent?",
+      "answer": "no",
+      "ground_truth_label": "no",
+      "faithfulness": 5,
+      "relevance": 5,
+      "reasoning": "The retrieved context, specifically passages [1] and [2], indicates that visual acuity in amblyopic eyes significantly increased or improved after treatment. This directly contradicts the idea that visual loss is permanent, thus supporting the system's 'no' answer. The answer directly addresses the question asked."
+    }
+  ]
+}

@@ -16,6 +16,7 @@ Run: python src/evaluate.py
 
 import os
 import re
+import sys
 import json
 import pickle
 import random
@@ -35,6 +36,10 @@ from transformers import T5ForConditionalGeneration, T5Tokenizer
 # Fix seeds
 random.seed(42)
 np.random.seed(42)
+
+# Windows console defaults to cp1252, which can't print characters like '→'
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")
 
 # Paths
 INDEX_DIR   = "data/index"
@@ -197,6 +202,50 @@ def compute_rouge_l(predictions, references):
     return round(float(np.mean(scores)), 4) if scores else 0.0
 
 
+# ── Retrieval IR Metrics (Recall@k, MRR) ─────────────────────────────────
+
+IR_TOP_K = 10  # depth searched for IR metrics — independent of the TOP_K used for generation
+
+
+def compute_retrieval_ir_metrics(test_data, index, passages, embedder, k_values=(1, 3, 5)):
+    """
+    Recall@k and MRR against gold passages.
+
+    A passage is "gold" for a question if it was chunked from that question's
+    own PubMedQA context (passages[i]['source_id'] == sample['id']). This is
+    possible because build_index.py tags every chunk with the source_id of
+    the PubMedQA example it came from.
+
+    Recall@k : fraction of questions where at least one gold passage is
+               retrieved in the top-k.
+    MRR      : mean reciprocal rank of the first gold passage retrieved
+               (within IR_TOP_K depth); 0 if none found.
+    """
+    recall_hits = {k: 0 for k in k_values}
+    reciprocal_ranks = []
+
+    for sample in tqdm(test_data, desc="  IR metrics"):
+        gold_id = sample["id"]
+        retrieved = retrieve(sample["question"], index, passages, embedder, top_k=IR_TOP_K)
+        ranks_of_gold = [
+            rank for rank, (p, _) in enumerate(retrieved, start=1)
+            if p.get("source_id") == gold_id
+        ]
+
+        for k in k_values:
+            if any(r <= k for r in ranks_of_gold):
+                recall_hits[k] += 1
+
+        reciprocal_ranks.append(1.0 / ranks_of_gold[0] if ranks_of_gold else 0.0)
+
+    n = len(test_data)
+    return {
+        f"recall@{k}": round(recall_hits[k] / n, 4) for k in k_values
+    } | {
+        "mrr": round(float(np.mean(reciprocal_ranks)), 4)
+    }
+
+
 # ── Retrieval Quality ─────────────────────────────────────────────────────
 
 def compute_retrieval_quality(all_retrieved_scores):
@@ -290,6 +339,10 @@ def main():
     # 4. Retrieval quality
     retrieval_quality = compute_retrieval_quality(all_scores)
 
+    # 4b. Retrieval IR metrics (Recall@k, MRR)
+    print("\nComputing retrieval IR metrics (Recall@k, MRR)...")
+    ir_metrics = compute_retrieval_ir_metrics(eval_data, index, passages, embedder)
+
     # 5. Confusion matrix
     cm = confusion_matrix(references, predictions, labels=labels)
 
@@ -304,6 +357,9 @@ def main():
     print(f"\nRetrieval Quality:")
     print(f"  Mean top-1 score   : {retrieval_quality['mean_top1_score']}")
     print(f"  Mean top-3 score   : {retrieval_quality['mean_top3_score']}")
+    print(f"\nRetrieval IR Metrics (depth={IR_TOP_K}):")
+    for k, v in ir_metrics.items():
+        print(f"  {k:<10} : {v}")
 
     print(f"\nPer-Class Results:")
     print(report_str)
@@ -322,6 +378,7 @@ def main():
         "exact_match_accuracy": round(accuracy * 100, 1),
         "rouge_l":            rouge_l,
         "retrieval_quality":  retrieval_quality,
+        "retrieval_ir_metrics": ir_metrics,
         "per_class": {
             label: {
                 "precision": round(report[label]["precision"], 4),
@@ -355,7 +412,10 @@ def main():
         f.write(f"Retrieval Quality:\n")
         f.write(f"  Mean top-1 score   : {retrieval_quality['mean_top1_score']}\n")
         f.write(f"  Mean top-3 score   : {retrieval_quality['mean_top3_score']}\n\n")
-        f.write("Per-Class Results:\n")
+        f.write(f"Retrieval IR Metrics (depth={IR_TOP_K}):\n")
+        for k, v in ir_metrics.items():
+            f.write(f"  {k:<10} : {v}\n")
+        f.write("\nPer-Class Results:\n")
         f.write(report_str)
         f.write("\nConfusion Matrix (rows=actual, cols=predicted):\n")
         f.write(f"         yes    no   maybe\n")

@@ -11,6 +11,12 @@
     "min_top1_score": 0.8612,
     "max_top1_score": 0.9762
   },
+  "retrieval_ir_metrics": {
+    "recall@1": 0.96,
+    "recall@3": 0.99,
+    "recall@5": 0.99,
+    "mrr": 0.975
+  },
   "per_class": {
     "yes": {
       "precision": 0.4,

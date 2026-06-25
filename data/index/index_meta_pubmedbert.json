@@ -1,0 +1,8 @@
+{
+  "model": "pritamdeka/S-PubMedBert-MS-MARCO",
+  "chunk_size": 200,
+  "chunk_overlap": 40,
+  "total_passages": 1809,
+  "embedding_dim": 768,
+  "random_seed": 42
+}

@@ -1,0 +1,63 @@
+{
+  "pubmedbert_avg_score": 0.9134,
+  "minilm_avg_score": 0.5704,
+  "improvement": 0.343,
+  "queries": [
+    {
+      "query": "Does aspirin reduce cardiovascular mortality?",
+      "pubmedbert_score": 0.8992,
+      "minilm_score": 0.5539,
+      "pubmedbert_top_text": "\"America's Best Hospitals,\" an influential list published annually by U.S. News and World Report, assesses the quality of hospitals. It is not known w",
+      "minilm_top_text": "was associated with lower adjusted 30-day mortality (odds ratio, 0.87; 95 percent confidence interval, 0.76 to 1.00; P=0.05 for top-ranked hospitals v"
+    },
+    {
+      "query": "Is metformin effective for type 2 diabetes treatment?",
+      "pubmedbert_score": 0.9223,
+      "minilm_score": 0.5667,
+      "pubmedbert_top_text": "Women with ovaries of polycystic morphology (PCO), without any other features of polycystic ovary syndrome (PCOS), respond similarly to women with PCO",
+      "minilm_top_text": "To evaluate the effects of insulin 30/70 twice daily or bedtime isophane (NPH) insulin plus continued sulfonylurea and metformin in patients with type"
+    },
+    {
+      "query": "What is the effect of statins on LDL cholesterol?",
+      "pubmedbert_score": 0.9233,
+      "minilm_score": 0.5644,
+      "pubmedbert_top_text": "showed significant improvements (P=0.02, 0.03,<0.01, respectively). In patients with isolated hypercholesterolemia, the serum LP(a) decreased signific",
+      "minilm_top_text": "showed significant improvements (P=0.02, 0.03,<0.01, respectively). In patients with isolated hypercholesterolemia, the serum LP(a) decreased signific"
+    },
+    {
+      "query": "Does surgery improve outcomes in lower back pain?",
+      "pubmedbert_score": 0.9232,
+      "minilm_score": 0.5198,
+      "pubmedbert_top_text": "To report the outcomes of surgical treatment of lower limb fractures in patients with chronic spinal cord injuries. A total of 37 lower limb fractures",
+      "minilm_top_text": "Severe, immediate postprocedural pain and the need for analgesics after vertebroplasty can be a discouraging experience for patients and caregivers. T"
+    },
+    {
+      "query": "Is vitamin D supplementation effective for bone health?",
+      "pubmedbert_score": 0.9076,
+      "minilm_score": 0.6134,
+      "pubmedbert_top_text": "Vitamin D deficiency/insufficiency (VDDI) is common in CKD patients and may be associated with abnormal mineral metabolism. It is not clear whether th",
+      "minilm_top_text": "The aetiology of osteochondritis dissecans is still unclear. The aim of this prospective pilot study was to analyse whether vitamin D insufficiency, o"
+    },
+    {
+      "query": "Does beta blocker therapy reduce heart failure mortality?",
+      "pubmedbert_score": 0.9052,
+      "minilm_score": 0.5389,
+      "pubmedbert_top_text": "Although consensus guidelines for pretreatment evaluation and monitoring of propranolol therapy in patients with infantile hemangiomas (IH) have been ",
+      "minilm_top_text": "was associated with lower adjusted 30-day mortality (odds ratio, 0.87; 95 percent confidence interval, 0.76 to 1.00; P=0.05 for top-ranked hospitals v"
+    },
+    {
+      "query": "Is chemotherapy effective for early stage breast cancer?",
+      "pubmedbert_score": 0.9178,
+      "minilm_score": 0.6335,
+      "pubmedbert_top_text": "To determine whether patients with high-risk metastatic breast cancer draw benefit from combination chemotherapy as first-line treatment. A total of 2",
+      "minilm_top_text": "To determine whether patients with high-risk metastatic breast cancer draw benefit from combination chemotherapy as first-line treatment. A total of 2"
+    },
+    {
+      "query": "Does ACE inhibitor therapy prevent diabetic nephropathy?",
+      "pubmedbert_score": 0.9087,
+      "minilm_score": 0.5728,
+      "pubmedbert_top_text": "The insertion/deletion (ID) polymorphism of the angiotensin-converting enzyme (ACE) gene has been associated with increased coronary heart disease (CH",
+      "minilm_top_text": "An association has been described between elevated serum angiotensin-converting enzyme (ACE) and an increased risk of severe hypoglycaemia (SH). To as"
+    }
+  ]
+}

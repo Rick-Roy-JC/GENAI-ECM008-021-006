@@ -1,0 +1,191 @@
+{
+  "retrieval": {
+    "mean_top1_score": 0.9421,
+    "mean_top3_score": 0.9209,
+    "min_top1_score": 0.8612,
+    "max_top1_score": 0.9762,
+    "recall@1": 0.96,
+    "recall@3": 0.99,
+    "recall@5": 0.99,
+    "mrr": 0.975
+  },
+  "generation_baseline": {
+    "exact_match_accuracy": 37.0,
+    "rouge_l": 0.0009,
+    "per_class": {
+      "yes": {
+        "precision": 0.4,
+        "recall": 0.4783,
+        "f1": 0.4356,
+        "support": 46
+      },
+      "no": {
+        "precision": 0.3333,
+        "recall": 0.4054,
+        "f1": 0.3659,
+        "support": 37
+      },
+      "maybe": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 17
+      }
+    }
+  },
+  "llm_judge": {
+    "judge_model": "gemini-2.5-flash",
+    "n": 25,
+    "faithfulness": {
+      "mean": 2.84,
+      "std": 1.953,
+      "min": 1,
+      "max": 5,
+      "n": 25
+    },
+    "relevance": {
+      "mean": 4.88,
+      "std": 0.588,
+      "min": 2,
+      "max": 5,
+      "n": 25
+    },
+    "by_correctness": {
+      "correct": {
+        "n": 11,
+        "mean_faithfulness": 4.273,
+        "mean_relevance": 5.0
+      },
+      "incorrect": {
+        "n": 14,
+        "mean_faithfulness": 1.714,
+        "mean_relevance": 4.786
+      }
+    },
+    "ground_truth_maybe": {
+      "n": 2,
+      "mean_faithfulness": 3.0,
+      "mean_relevance": 5.0,
+      "samples": [
+        {
+          "answer": "no",
+          "ground_truth": "maybe",
+          "correct": false,
+          "faithfulness": 1,
+          "relevance": 5
+        },
+        {
+          "answer": "yes",
+          "ground_truth": "maybe",
+          "correct": false,
+          "faithfulness": 5,
+          "relevance": 5
+        }
+      ]
+    }
+  },
+  "maybe_class_fix": {
+    "base_beam_baseline": {
+      "accuracy": 37.0,
+      "macro_f1": 0.2672,
+      "yes_precision": 0.4,
+      "yes_recall": 0.4783,
+      "yes_f1": 0.4356,
+      "yes_support": 46,
+      "no_precision": 0.3333,
+      "no_recall": 0.4054,
+      "no_f1": 0.3659,
+      "no_support": 37,
+      "maybe_precision": 0.0,
+      "maybe_recall": 0.0,
+      "maybe_f1": 0.0,
+      "maybe_support": 17,
+      "confusion_matrix": "              precision    recall  f1-score   support\n\n         yes       0.40      0.48      0.44        46\n          no       0.33      0.41      0.37        37\n       maybe       0.00      0.00      0.00        17\n\n    accuracy                           0.37       100\n   macro avg       0.24      0.29      0.27       100\nweighted avg       0.31      0.37      0.34       100\n"
+    },
+    "base_likelihood_fewshot": {
+      "accuracy": 34.0,
+      "macro_f1": 0.2399,
+      "yes_precision": 0.3548,
+      "yes_recall": 0.2391,
+      "yes_f1": 0.2857,
+      "yes_support": 46,
+      "no_precision": 0.3333,
+      "no_recall": 0.6216,
+      "no_f1": 0.434,
+      "no_support": 37,
+      "maybe_precision": 0.0,
+      "maybe_recall": 0.0,
+      "maybe_f1": 0.0,
+      "maybe_support": 17,
+      "confusion_matrix": "              precision    recall  f1-score   support\n\n         yes       0.35      0.24      0.29        46\n          no       0.33      0.62      0.43        37\n       maybe       0.00      0.00      0.00        17\n\n    accuracy                           0.34       100\n   macro avg       0.23      0.29      0.24       100\nweighted avg       0.29      0.34      0.29       100\n"
+    },
+    "base_calibrated_alpha_0.25": {
+      "accuracy": 35.0,
+      "macro_f1": 0.2196,
+      "yes_precision": 0.2941,
+      "yes_recall": 0.1087,
+      "yes_f1": 0.1587,
+      "yes_support": 46,
+      "no_precision": 0.3614,
+      "no_recall": 0.8108,
+      "no_f1": 0.5,
+      "no_support": 37,
+      "maybe_precision": 0.0,
+      "maybe_recall": 0.0,
+      "maybe_f1": 0.0,
+      "maybe_support": 17,
+      "confusion_matrix": "              precision    recall  f1-score   support\n\n         yes       0.29      0.11      0.16        46\n          no       0.36      0.81      0.50        37\n       maybe       0.00      0.00      0.00        17\n\n    accuracy                           0.35       100\n   macro avg       0.22      0.31      0.22       100\nweighted avg       0.27      0.35      0.26       100\n"
+    },
+    "base_calibrated_alpha_0.5": {
+      "accuracy": 35.0,
+      "macro_f1": 0.2065,
+      "yes_precision": 0.25,
+      "yes_recall": 0.0652,
+      "yes_f1": 0.1034,
+      "yes_support": 46,
+      "no_precision": 0.3678,
+      "no_recall": 0.8649,
+      "no_f1": 0.5161,
+      "no_support": 37,
+      "maybe_precision": 0.0,
+      "maybe_recall": 0.0,
+      "maybe_f1": 0.0,
+      "maybe_support": 17,
+      "confusion_matrix": "              precision    recall  f1-score   support\n\n         yes       0.25      0.07      0.10        46\n          no       0.37      0.86      0.52        37\n       maybe       0.00      0.00      0.00        17\n\n    accuracy                           0.35       100\n   macro avg       0.21      0.31      0.21       100\nweighted avg       0.25      0.35      0.24       100\n"
+    },
+    "base_calibrated_alpha_0.75": {
+      "accuracy": 34.0,
+      "macro_f1": 0.2403,
+      "yes_precision": 0.3333,
+      "yes_recall": 0.0435,
+      "yes_f1": 0.0769,
+      "yes_support": 46,
+      "no_precision": 0.3571,
+      "no_recall": 0.8108,
+      "no_f1": 0.4959,
+      "no_support": 37,
+      "maybe_precision": 0.2,
+      "maybe_recall": 0.1176,
+      "maybe_f1": 0.1481,
+      "maybe_support": 17,
+      "confusion_matrix": "              precision    recall  f1-score   support\n\n         yes       0.33      0.04      0.08        46\n          no       0.36      0.81      0.50        37\n       maybe       0.20      0.12      0.15        17\n\n    accuracy                           0.34       100\n   macro avg       0.30      0.32      0.24       100\nweighted avg       0.32      0.34      0.24       100\n"
+    },
+    "base_calibrated_alpha_1.0": {
+      "accuracy": 35.0,
+      "macro_f1": 0.2962,
+      "yes_precision": 0.5,
+      "yes_recall": 0.0435,
+      "yes_f1": 0.08,
+      "yes_support": 46,
+      "no_precision": 0.3768,
+      "no_recall": 0.7027,
+      "no_f1": 0.4906,
+      "no_support": 37,
+      "maybe_precision": 0.2593,
+      "maybe_recall": 0.4118,
+      "maybe_f1": 0.3182,
+      "maybe_support": 17,
+      "confusion_matrix": "              precision    recall  f1-score   support\n\n         yes       0.50      0.04      0.08        46\n          no       0.38      0.70      0.49        37\n       maybe       0.26      0.41      0.32        17\n\n    accuracy                           0.35       100\n   macro avg       0.38      0.39      0.30       100\nweighted avg       0.41      0.35      0.27       100\n"
+    }
+  }
+}

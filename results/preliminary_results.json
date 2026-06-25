@@ -1,0 +1,522 @@
+[
+  {
+    "question": "Can common carotid intima media thickness serve as an indicator of both cardiovascular phenotype and risk among black Africans?",
+    "answer": "no",
+    "retrieved_passages": [
+      {
+        "text": "It is not known whether common carotid intima media thickness (CIMT) can serve as a surrogate marker of cardiovascular risk among black Africans. Therefore, we examined whether CIMT differed significa",
+        "score": 0.9658,
+        "source": "25150098",
+        "label": "yes"
+      },
+      {
+        "text": "Although observational data support an inverse relationship between high-density lipoprotein (HDL) cholesterol and coronary heart disease (CHD), genetic HDL deficiency states often do not correlate wi",
+        "score": 0.935,
+        "source": "17113061",
+        "label": "no"
+      },
+      {
+        "text": "To provide insight into the factors by which obesity in itself may directly lead to early arterial damage, we aimed to determine early sonographic markers of obesity-related vascular dysfunction in yo",
+        "score": 0.9275,
+        "source": "22532370",
+        "label": "yes"
+      }
+    ],
+    "ground_truth_label": "yes",
+    "ground_truth_answer": "Our findings support CIMT as a significant indicator of both cardiovascular risk and phenotype among adult black Africans. However, specific thresholds need to be defined based on prospective studies."
+  },
+  {
+    "question": "Autoxidation products of both carbohydrates and lipids are increased in uremic plasma: is there oxidative stress in uremia?",
+    "answer": "yes",
+    "retrieved_passages": [
+      {
+        "text": "Advanced glycation end products (AGEs), formed by non-enzymatic glycation and oxidation (glycoxidation) reactions, have been implicated in the pathogenesis of several diseases, including normoglycemic",
+        "score": 0.9615,
+        "source": "9767546",
+        "label": "yes"
+      },
+      {
+        "text": "were similar in diabetic and non-diabetic patients on hemodialysis, indicating that their increase was not driven by glucose. Pentosidine and MDA-lysine were also increased in plasma to the same exten",
+        "score": 0.9321,
+        "source": "9767546",
+        "label": "yes"
+      },
+      {
+        "text": "Hyperleptinemia and oxidative stress play a major role in the development of cardiovascular diseases in obesity. This study aimed to investigate whether there is a relationship between plasma levels o",
+        "score": 0.9262,
+        "source": "20577124",
+        "label": "yes"
+      }
+    ],
+    "ground_truth_label": "yes",
+    "ground_truth_answer": "These data suggest that the increased levels of AGEs in blood, and probably in tissues, reported in uremia implicate a broad derangement in non-enzymatic biochemistry involving alterations in autoxidation of both carbohydrates and lipids."
+  },
+  {
+    "question": "Does pain intensity predict a poor opioid response in cancer patients?",
+    "answer": "yes",
+    "retrieved_passages": [
+      {
+        "text": "A secondary analysis of one-hundred-sixty-seven patients referred for treatment of cancer-related pain was conducted. Pain intensity at admission was recorded and patients were divided in three catego",
+        "score": 0.9399,
+        "source": "21256734",
+        "label": "no"
+      },
+      {
+        "text": "Breathlessness is one of the most distressing symptoms experienced by patients with advanced cancer and noncancer diagnoses alike. Often, severity of breathlessness increases quickly, calling for rapi",
+        "score": 0.9197,
+        "source": "26578404",
+        "label": "yes"
+      },
+      {
+        "text": "Severe, immediate postprocedural pain and the need for analgesics after vertebroplasty can be a discouraging experience for patients and caregivers. The goal of this study was to investigate whether t",
+        "score": 0.9102,
+        "source": "23598835",
+        "label": "no"
+      }
+    ],
+    "ground_truth_label": "no",
+    "ground_truth_answer": "Baseline pain intensity does not predict the outcome after an appropriate opioid titration. It is likely that non-homogeneous pain treatment would have biased the outcome of a previous work."
+  },
+  {
+    "question": "Risk factors for major depression during midlife among a community sample of women with and without prior major depression: are they the same or different?",
+    "answer": "yes",
+    "retrieved_passages": [
+      {
+        "text": "Women's vulnerability for a first lifetime-onset of major depressive disorder (MDD) during midlife is substantial. It is unclear whether risk factors differ for first lifetime-onset and recurrent MDD.",
+        "score": 0.9605,
+        "source": "25417760",
+        "label": "no"
+      },
+      {
+        "text": "those with a prior MDD history (28% v. 59%) and their risk profiles differed. Health conditions prior to baseline and during follow-ups perception of functioning (ps<0.05) and vasomotor symptoms (VMS)",
+        "score": 0.9507,
+        "source": "25417760",
+        "label": "no"
+      },
+      {
+        "text": "The gender difference in prevalence and incidence rates of depression is one of the most consistent findings in psychiatric epidemiology. We sought to examine whether any gender differences in symptom",
+        "score": 0.9396,
+        "source": "15052394",
+        "label": "no"
+      }
+    ],
+    "ground_truth_label": "no",
+    "ground_truth_answer": "The menopausal transition warrants attention as a period of vulnerability to MDD recurrence, while health factors and VMS should be considered important risk factors for first lifetime-onset of MDD during midlife."
+  },
+  {
+    "question": "Is trabecular bone related to primary stability of miniscrews?",
+    "answer": "yes",
+    "retrieved_passages": [
+      {
+        "text": "To compare the primary stability of miniscrews inserted into bone blocks of different bone mineral densities (BMDs) with and without cortical bone, and investigate whether some trabecular properties c",
+        "score": 0.9492,
+        "source": "24245816",
+        "label": "yes"
+      },
+      {
+        "text": "The proper angle of miniscrew insertion is important for cortical anchorage, patient safety, and biomechanical control. The purposes of this study are to report the alveolar process thickness and inte",
+        "score": 0.9099,
+        "source": "25488308",
+        "label": "no"
+      },
+      {
+        "text": "To analyze the reliability of micro-computed tomography (micro-CT) to assess bone density and the microstructure of the maxillary bones at the alveolar process in human clinics by direct comparison wi",
+        "score": 0.889,
+        "source": "22540518",
+        "label": "yes"
+      }
+    ],
+    "ground_truth_label": "yes",
+    "ground_truth_answer": "Cancellous bone plays an important role in primary stability of mini-implants in the presence or absence of cortical bone."
+  },
+  {
+    "question": "Application of computer-aided diagnosis (CAD) in MR-mammography (MRM): do we really need whole lesion time curve distribution analysis?",
+    "answer": "yes",
+    "retrieved_passages": [
+      {
+        "text": "The identification of the most suspect enhancing part of a lesion is regarded as a major diagnostic criterion in dynamic magnetic resonance mammography. Computer-aided diagnosis (CAD) software allows ",
+        "score": 0.9477,
+        "source": "19268855",
+        "label": "no"
+      },
+      {
+        "text": "To evaluate the diagnostic accuracy of gadofosveset-enhanced magnetic resonance (MR) angiography in the assessment of carotid artery stenosis, with digital subtraction angiography (DSA) as the referen",
+        "score": 0.9215,
+        "source": "19401574",
+        "label": "yes"
+      },
+      {
+        "text": "Limited and conflicting data exist on an association between mammographic density (MD) and re-excision rates after breast-conserving surgery (BCS). Additionally, the correlation of MD with resection o",
+        "score": 0.9196,
+        "source": "26471488",
+        "label": "no"
+      }
+    ],
+    "ground_truth_label": "no",
+    "ground_truth_answer": "The integration of whole-lesion dynamic data tends to improve specificity. However, no statistical significance backs up this finding."
+  },
+  {
+    "question": "Does the investing layer of the deep cervical fascia exist?",
+    "answer": "yes",
+    "retrieved_passages": [
+      {
+        "text": "The placement of the superficial cervical plexus block has been the subject of controversy. Although the investing cervical fascia has been considered as an impenetrable barrier, clinically, the place",
+        "score": 0.9223,
+        "source": "16249670",
+        "label": "no"
+      },
+      {
+        "text": "cervical triangle comprised the strap fascia.",
+        "score": 0.8778,
+        "source": "16249670",
+        "label": "no"
+      },
+      {
+        "text": "than 20 cc collected above the fascial layer. These patients did not present with recurrence of seroma after aspiration.",
+        "score": 0.8715,
+        "source": "17312514",
+        "label": "yes"
+      }
+    ],
+    "ground_truth_label": "no",
+    "ground_truth_answer": "This study provides anatomical evidence to indicate that the so-called investing cervical fascia does not exist in the anterior triangle of the neck. Taking the previous reports together, the authors' findings strongly suggest that deep potential spaces in the neck are directly continuous with the subcutaneous tissue."
+  },
+  {
+    "question": "Do foreign bodies migrate through the body towards the heart?",
+    "answer": "yes",
+    "retrieved_passages": [
+      {
+        "text": "Fixation of foreign bodies (FB), in the mucosa, can favor its migration, giving origin to the popular saying: 'FB walk to the heart'.AIM: Describe the mechanisms involved in FB migration and how to di",
+        "score": 0.9233,
+        "source": "19575104",
+        "label": "no"
+      },
+      {
+        "text": "Hereditary transthyretin (ATTR) amyloidosis with increased left ventricular wall thickness could easily be misdiagnosed by echocardiography as hypertrophic cardiomyopathy (HCM). Our aim was to create ",
+        "score": 0.8824,
+        "source": "26104852",
+        "label": "yes"
+      },
+      {
+        "text": "Obesity is associated with an increased risk for cardiovascular disease. Although it is known that white adipose tissue (WAT) produces numerous proinflammatory and proatherogenic cytokines and chemoki",
+        "score": 0.882,
+        "source": "16195477",
+        "label": "yes"
+      }
+    ],
+    "ground_truth_label": "no",
+    "ground_truth_answer": "The study allows us to determine that FB can move through the body but not towards the heart. The study also serves as a warning sign: in cases of prolonged histories of FB ingestion, imaging studies are mandatory before endoscopic examination."
+  },
+  {
+    "question": "Is acute fibrinous and organizing pneumonia the expression of immune dysregulation?",
+    "answer": "no",
+    "retrieved_passages": [
+      {
+        "text": "Acute fibrinous and organizing pneumonia (AFOP) is a recently described histologic pattern of diffuse pulmonary disease. In children, all cases reported to date have been fatal. In this study, we desc",
+        "score": 0.9233,
+        "source": "23337545",
+        "label": "yes"
+      },
+      {
+        "text": "Neutrophil infiltration of the lung is characteristic of early posttraumatic acute respiratory distress syndrome (ARDS). This study examines the ability of neutrophils isolated (over the first 24 hrs)",
+        "score": 0.9033,
+        "source": "12163782",
+        "label": "yes"
+      },
+      {
+        "text": "Multiple viruses are often detected in children with respiratory infection but the significance of co-infection in pathogenesis, severity and outcome is unclear. To correlate the presence of viral co-",
+        "score": 0.8957,
+        "source": "27096199",
+        "label": "no"
+      }
+    ],
+    "ground_truth_label": "yes",
+    "ground_truth_answer": "Aplastic anemia is associated with a variety of autoimmune syndromes. The sequence of events in our patient suggests that the hepatic failure, AFOP, and the VSAA may all have been part of an autoimmune syndrome. AFOP could be the result of immune dysregulation in this pediatric case with favorable outcome after immunosuppressive therapy and hematopoietic stem cell transplantation."
+  },
+  {
+    "question": "Does fluoridation reduce the use of dental services among adults?",
+    "answer": "no",
+    "retrieved_passages": [
+      {
+        "text": "The authors determine whether prevention influences the use of health services. Fluoridation's effect on restorative dental demand among 972 Washington state employees and spouses, aged 20 to 34 years",
+        "score": 0.9446,
+        "source": "9140335",
+        "label": "maybe"
+      },
+      {
+        "text": "ideal quality at baseline. When only teeth with decay and unsatisfactory fillings at baseline were considered, adults with high fluoridation exposure had a lower probability of receiving a restoration",
+        "score": 0.9343,
+        "source": "9140335",
+        "label": "maybe"
+      },
+      {
+        "text": "Several studies have suggested a protective effect of folic acid (FA) on congenital heart anomalies. Down syndrome (DS) infants are known to have a high frequency of heart anomalies. Not all children ",
+        "score": 0.9039,
+        "source": "17051586",
+        "label": "no"
+      }
+    ],
+    "ground_truth_label": "maybe",
+    "ground_truth_answer": "Among adults aged 20 to 34 years with private dental insurance, fluoridation reduces oral disease but may or may not reduce use of restorative services, depending on dentists' clinical decisions."
+  },
+  {
+    "question": "Are IgM-enriched immunoglobulins an effective adjuvant in septic VLBW infants?",
+    "answer": "yes",
+    "retrieved_passages": [
+      {
+        "text": "All VLBW infants from January 2008 to December 2012 with positive blood culture beyond 72 hours of life were enrolled in a retrospective cohort study. Newborns born after June 2010 were treated with I",
+        "score": 0.9221,
+        "source": "24098953",
+        "label": "yes"
+      },
+      {
+        "text": "= 0.779). After adjusted logistic regression, weight gain from birth to sixth week of life and need for blood transfusions were found to be significant risk factors for ROP in both groups.",
+        "score": 0.8997,
+        "source": "19198736",
+        "label": "no"
+      },
+      {
+        "text": "rate of sepsis compared with VLBW infants born in centers with RA (n = 717), which was particularly evident for late-onset sepsis (14.0% vs 20.4%; P = 0.002). Furthermore, more central venous lines (4",
+        "score": 0.8995,
+        "source": "19322056",
+        "label": "yes"
+      }
+    ],
+    "ground_truth_label": "yes",
+    "ground_truth_answer": "This hypothesis-generator study shows that IgM-eIVIG is an effective adjuvant therapy in VLBW infants with proven sepsis. Randomized controlled trials are warranted to confirm this pilot observation."
+  },
+  {
+    "question": "Is there a favorable subset of patients with prostate cancer who develop oligometastases?",
+    "answer": "yes",
+    "retrieved_passages": [
+      {
+        "text": "Examine whether patients with prostate cancer choose the more aggressive of two radiotherapeutic options, whether this choice is reasoned, and what the determinants of the choice are. One hundred fift",
+        "score": 0.9225,
+        "source": "17008699",
+        "label": "no"
+      },
+      {
+        "text": "To analyze, retrospectively, the patterns and behavior of metastatic lesions in prostate cancer patients treated with external beam radiotherapy and to investigate whether patients with<or =5 lesions ",
+        "score": 0.9194,
+        "source": "14697414",
+        "label": "yes"
+      },
+      {
+        "text": "To examine the ability of various postoperative nomograms to predict prostate cancer-specific mortality (PCSM) and to validate that they could predict aggressive biochemical recurrence (BCR). Prostate",
+        "score": 0.9093,
+        "source": "23806388",
+        "label": "yes"
+      }
+    ],
+    "ground_truth_label": "yes",
+    "ground_truth_answer": "Patients with<or =5 metastatic sites had significantly better survival rates than patients with>5 lesions. Because existing sites of metastatic disease may be the primary sites of origin for additional metastases, our findings suggest that early detection and aggressive treatment of patients with a small number of metastatic lesions is worth testing as an approach to improving long-term survival."
+  },
+  {
+    "question": "Could ADMA levels in young adults born preterm predict an early endothelial dysfunction?",
+    "answer": "no",
+    "retrieved_passages": [
+      {
+        "text": "Sporadic data present in literature report how preterm birth and low birth weight are risk factors for the development of cardiovascular diseases in later life. High levels of asymmetric dimethylargin",
+        "score": 0.9437,
+        "source": "21420186",
+        "label": "yes"
+      },
+      {
+        "text": "fluorescent detection. ADMA levels were reduced in ex-ELBW subjects compared to C (0.606+0.095 vs 0.562+0.101 μmol/L, p<0.05), and significantly correlated inversely with gestational age (r=-0.61, p<0",
+        "score": 0.9264,
+        "source": "21420186",
+        "label": "yes"
+      },
+      {
+        "text": "To provide insight into the factors by which obesity in itself may directly lead to early arterial damage, we aimed to determine early sonographic markers of obesity-related vascular dysfunction in yo",
+        "score": 0.906,
+        "source": "22532370",
+        "label": "yes"
+      }
+    ],
+    "ground_truth_label": "yes",
+    "ground_truth_answer": "Our findings reveal a significant decrease in ADMA levels of ex-ELBW subjects compared to C, underlining a probable correlation with preterm birth and low birth weight. Taken together, these results may underlie the onset of early circulatory dysfunction predictive of increased cardiovascular risk."
+  },
+  {
+    "question": "Is eligibility for a chemotherapy protocol a good prognostic factor for invasive bladder cancer after radical cystectomy?",
+    "answer": "yes",
+    "retrieved_passages": [
+      {
+        "text": "To assess whether eligibility to an adjuvant chemotherapy protocol in itself represents a good prognostic factor after radical cystectomy for bladder cancer. Between April 1984 and May 1989, our insti",
+        "score": 0.9414,
+        "source": "15483019",
+        "label": "yes"
+      },
+      {
+        "text": "To evaluate the impact of HER2 immunoreactivity on clinical outcome in locally advanced urothelial carcinoma patients who received surgery alone, or methotrexate, vinblastine, epirubicin, and cisplati",
+        "score": 0.938,
+        "source": "17940352",
+        "label": "maybe"
+      },
+      {
+        "text": "vascular invasion, but not the response to NACT, were independently associated with upper LNM. The number of lymph nodes involved, response to NACT, tumor histology and a positive vaginal margin were ",
+        "score": 0.9216,
+        "source": "25859857",
+        "label": "no"
+      }
+    ],
+    "ground_truth_label": "yes",
+    "ground_truth_answer": "These data suggest that being willing and fit enough for a chemotherapy protocol is a good prognostic factor for invasive bladder cancer. This eligibility bias emphasizes the need for prospective, randomized trials, and indicates that single-group studies using historical or matched controls have to be interpreted with caution."
+  },
+  {
+    "question": "Is withdrawal-induced anxiety in alcoholism based on beta-endorphin deficiency?",
+    "answer": "no",
+    "retrieved_passages": [
+      {
+        "text": "Associations between several psychopathological alterations and lowered beta-endorphin(beta E) plasma levels have already been stated in former studies. However, whereas single measures during static ",
+        "score": 0.9494,
+        "source": "12172698",
+        "label": "yes"
+      },
+      {
+        "text": "pituitary-adrenocortical hormone secretion, plasma corticotropin (ACTH) and cortisol were also determined. In accordance with prior studies, beta E was significantly lowered on day 1 and day 14 of alc",
+        "score": 0.9299,
+        "source": "12172698",
+        "label": "yes"
+      },
+      {
+        "text": "Alcohol-associated cues elicit craving in human addicts but little is known about craving mechanisms. Current animal models focus on relapse and this may confound the effect of environmental cues. OBJ",
+        "score": 0.903,
+        "source": "12684740",
+        "label": "yes"
+      }
+    ],
+    "ground_truth_label": "yes",
+    "ground_truth_answer": "Our results give first evidence that lowered beta E during alcohol withdrawal may contribute to anxiety as a common disturbance during this state."
+  },
+  {
+    "question": "Aripiprazole: a new risk factor for pathological gambling?",
+    "answer": "no",
+    "retrieved_passages": [
+      {
+        "text": "It is commonly accepted that pathological gambling results from the interaction of multiple risk factors. Among these, dopamine replacement therapy (DRT) prescribed for Parkinson disease can be cited.",
+        "score": 0.9495,
+        "source": "24315783",
+        "label": "yes"
+      },
+      {
+        "text": "rate of lifetime DSM-III-R psychotic disorder diagnoses than patients with nonpsychotic BDD. However, the two groups did not differ significantly on most other variables examined. For instance, both p",
+        "score": 0.8901,
+        "source": "8262881",
+        "label": "yes"
+      },
+      {
+        "text": "To examine age-related differences in the relationship between personality and coping strategies in an Australian population of psychiatric inpatients. Consenting eligible adults (N=238) from 18-100 y",
+        "score": 0.8849,
+        "source": "22617083",
+        "label": "yes"
+      }
+    ],
+    "ground_truth_label": "yes",
+    "ground_truth_answer": "Adverse drug reactions were confronted with other already published case reports. Dopamine partial agonist mechanism of aripiprazole could explain the occurrence of pathological gambling."
+  },
+  {
+    "question": "The nurse cystoscopist: a feasible option?",
+    "answer": "yes",
+    "retrieved_passages": [
+      {
+        "text": "To compare the accuracy achieved by a trained urology nurse practitioner (UNP) and consultant urologist in detecting bladder tumours during flexible cystoscopy. Eighty-three patients underwent flexibl",
+        "score": 0.8988,
+        "source": "10759659",
+        "label": "yes"
+      },
+      {
+        "text": "Bladder catheterisation is a routine part of major abdominal surgery. Transurethral catheterisation is the most common method of bladder drainage but is also notorious for its discomfort and increased",
+        "score": 0.8871,
+        "source": "20497880",
+        "label": "no"
+      },
+      {
+        "text": "To determine the necessity of pelvic computed tomography (CT) in patients of renal cell carcinoma (RCC). We reviewed the records of 400 patients of RCC, who underwent treatment at our institution betw",
+        "score": 0.8816,
+        "source": "12090319",
+        "label": "no"
+      }
+    ],
+    "ground_truth_label": "yes",
+    "ground_truth_answer": "A UNP can be trained to perform cystoscopy and detect suspicious lesions as accurately as can a consultant urologist. Legal and training issues in implementation are important."
+  },
+  {
+    "question": "Cancer of the buccal mucosa: are margins and T-stage accurate predictors of local control?",
+    "answer": "no",
+    "retrieved_passages": [
+      {
+        "text": "Cancer of the buccal mucosa is an uncommon and aggressive neoplasm of the oral cavity. Less than 2% of patients treated for cancer of the oral cavity at Roswell Park Cancer Institute (RPCI) from 1971 ",
+        "score": 0.9428,
+        "source": "11713724",
+        "label": "no"
+      },
+      {
+        "text": "21 (75%) had T1 or T2 tumors. The rate of local recurrence was 56% for the group as a whole. Patients with close or positive margins had a 66% local failure rate as compared with 52% when surgical mar",
+        "score": 0.9341,
+        "source": "11713724",
+        "label": "no"
+      },
+      {
+        "text": "The purpose of this survey was to ascertain the most common surgical practices for attaining negative (tumor-free) surgical margins in patients desiring breast-conservation treatment for breast cancer",
+        "score": 0.9276,
+        "source": "19854401",
+        "label": "no"
+      }
+    ],
+    "ground_truth_label": "no",
+    "ground_truth_answer": "Local excision of T1 and T2 buccal mucosa cancers with pathologically negative margins had a high rate of local recurrence in our series. Low T-stage and negative margins are not adequate predictors of local control. Even early buccal tumors may benefit from adjuvant therapy to enhance local control."
+  },
+  {
+    "question": "Xanthogranulomatous cholecystitis: a premalignant condition?",
+    "answer": "yes",
+    "retrieved_passages": [
+      {
+        "text": "Xanthogranulomatous cholecystitis (XGC) is an uncommon variant of chronic cholecystitis, characterized by marked thickening of the gallbladder wall and dense local adhesions. It often mimics a gallbla",
+        "score": 0.9365,
+        "source": "21459725",
+        "label": "no"
+      },
+      {
+        "text": "Cholecystectomy for GB polyps that are larger than 10 mm is generally recommended because of the high probability of neoplasm. In contrast, a follow-up strategy is preferred for GB polyps smaller than",
+        "score": 0.9109,
+        "source": "19398929",
+        "label": "no"
+      },
+      {
+        "text": "or nuclear staining. p53 mutation was positive in 52% of GBC cases and 3% of XGC, but was not expressed in chronic cholecystitis and control gallbladders. p53 expression was lower in XGC than in GBC (",
+        "score": 0.9096,
+        "source": "21459725",
+        "label": "no"
+      }
+    ],
+    "ground_truth_label": "no",
+    "ground_truth_answer": "The expression of p53, PCNA and beta-catenin in XGC was significantly different from GBC and similar to chronic cholecystitis, thus indicating the inflammatory nature of XGC and may not support a premalignant nature of the lesion."
+  },
+  {
+    "question": "Is transurethral catheterisation the ideal method of bladder drainage?",
+    "answer": "no",
+    "retrieved_passages": [
+      {
+        "text": "Bladder catheterisation is a routine part of major abdominal surgery. Transurethral catheterisation is the most common method of bladder drainage but is also notorious for its discomfort and increased",
+        "score": 0.9447,
+        "source": "20497880",
+        "label": "no"
+      },
+      {
+        "text": "The aim of this study was to assess the efficacy of ureteroscopy for lower ureteric stones without the use of fluoroscopy. Between June 2001 and January 2005, a total of 110 patients with a mean age o",
+        "score": 0.9056,
+        "source": "17192736",
+        "label": "no"
+      },
+      {
+        "text": "Little is known about whether a routinely inserted endoscopic nasobiliary drainage (ENBD) tube improves the clinical course in patients with choledocholithiasis-induced acute cholangitis after clearan",
+        "score": 0.901,
+        "source": "19913785",
+        "label": "no"
+      }
+    ],
+    "ground_truth_label": "no",
+    "ground_truth_answer": "Our study emphasised the discomfort of transurethral urinary catheters, especially in male patients, and the high incidence of urinary tract infections in both sexes. Consideration should be given to the utilisation of alternative methods of bladder drainage, such as suprapubic catheterisation, which can be performed with ease during laparotomy."
+  }
+]

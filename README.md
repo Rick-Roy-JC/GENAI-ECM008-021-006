@@ -1,3 +1,23 @@
+---
+title: Clinical RAG — PubMedQA
+emoji: 🏥
+colorFrom: blue
+colorTo: green
+sdk: gradio
+sdk_version: 6.19.0
+app_file: app.py
+pinned: false
+---
+
+<!--
+  The YAML block above is HF Spaces config metadata (required at the very
+  top of README.md for Spaces to detect the SDK/entry point). It's ignored
+  by GitHub's renderer. Spaces deployment: push this whole repo (including
+  app.py, src/, data/processed/*.json, requirements.txt) to a new Space —
+  the FAISS index is rebuilt automatically on first boot since the .index/
+  .pkl files are gitignored (see src/gradio_app.py's bootstrap check).
+-->
+
 ## Project Webpage
 [Click here to view the project page](https://rick-roy-jc.github.io/GENAI-ECM008-021-006/)
 

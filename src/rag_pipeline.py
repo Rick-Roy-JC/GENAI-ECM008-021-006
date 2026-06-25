@@ -13,6 +13,7 @@ Run: python src/rag_pipeline.py
 """
 
 import os
+import sys
 import json
 import pickle
 import random
@@ -26,6 +27,9 @@ from transformers import T5ForConditionalGeneration, T5Tokenizer
 # Fix random seeds
 random.seed(42)
 np.random.seed(42)
+
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")
 
 # Paths
 INDEX_DIR     = "data/index"

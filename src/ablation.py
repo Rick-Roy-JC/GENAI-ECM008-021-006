@@ -13,6 +13,7 @@ Run: python src/ablation.py
 
 import os
 import re
+import sys
 import json
 import pickle
 import random
@@ -27,6 +28,9 @@ from transformers import T5ForConditionalGeneration, T5Tokenizer
 
 random.seed(42)
 np.random.seed(42)
+
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")
 
 INDEX_DIR   = "data/index"
 RESULTS_DIR = "results"
